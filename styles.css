@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 55px;
+  font-family: cursive;
+}
+.navbar a {
+  color: black;
+  text-decoration: none;
+  margin: 0 15px;
+}
+.navbar a:hover {
+  text-decoration: none;
+  color: orange;
+}
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Brush Script MT", cursive;
+  color: orange;
+}
+button {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(255, 140, 0);
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger open (X) animation */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.section1 {
+  text-align: center;
+  padding: 50px;
+  background-image: url(Images/corporate-businessman-giving-presentation-large-audience.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  font-family: cursive;
+}
+.section1 h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  padding-top: 22%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.section1 p {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.section2 {
+  padding: 2rem 0;
+  text-align: center;
+  font-family: cursive;
+  background-color: #f4f4f4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+}
+
+.section2 img {
+  border-radius: 15px;
+  box-shadow: #333;
+}
+.section2 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: orange;
+}
+.section2 p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+.section2 strong {
+  color: orange;
+}
+@media (max-width: 480px) {
+  .section1 {
+    padding: 20px;
+    height: 70vh;
+  }
+  .section1 h2 {
+    font-size: 2rem;
+    padding-top: 40%;
+  }
+  .section1 p {
+    font-size: 2rem;
+  }
+  .section2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+    padding: 5%;
+  }
+  .section2 img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 110;
+  }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: #333;
+    flex-direction: column;
+    width: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.25s ease;
+  }
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+  }
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+  }
+  .nav-links.active {
+    max-height: 600px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .section1 {
+    padding: 30px;
+    height: 80vh;
+  }
+  .section1 h2 {
+    font-size: 2.5rem;
+    padding-top: 30%;
+  }
+  .section1 p {
+    font-size: 1.5rem;
+  }
+  .section2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 5%;
+  }
+  .section2 img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .section1 {
+    padding: 70px;
+    height: 100vh;
+  }
+  .section1 h2 {
+    font-size: 4rem;
+    padding-top: 20%;
+  }
+  .section1 p {
+    font-size: 2rem;
+  }
+  .section2 {
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5%;
+  }
+  .section2 h2 {
+    font-size: 3rem;
+  }
+  .section2 p {
+    font-size: 1.5rem;
+  }
+  .section2 img {
+    width: 100%;
+    height: auto;
+  }
+}
+.section3 {
+  padding: 5% 7%;
+  gap: 20px;
+  font-family: cursive;
+  background-color: #e0e0e0;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.grid-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.section3 img {
+  border-radius: 20px;
+  box-shadow: #333;
+}
+.section3 h2 {
+  padding-bottom: 3%;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 40px 0;
+  font-family: cursive;
+  color: #333;
+  background-color: #e0e0e0;
+}
+.section3 h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  padding-top: 2%;
+}
+.section3 p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  padding: 0 5%;
+}
+@media (max-width: 768px) {
+  .grid-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .section3 img {
+    width: 100%;
+    height: auto;
+  }
+}
+.section4 {
+  padding: 7% 7%;
+  text-align: center;
+  font-family: cursive;
+  background-color: #f4f4f4;
+}
+.section4 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: orange;
+}
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: cursive;
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  font-size: 1rem;
+}
+form button {
+  align-self: center;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: orange;
+}
+form button:hover {
+  background-color: rgb(255, 140, 0);
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-family: cursive;
+}
+footer {
+  color: orange;
+  text-decoration: none;
+}
+footer :hover {
+  text-decoration: none;
+  color: lightblue;
+  font-weight: bold;
+}

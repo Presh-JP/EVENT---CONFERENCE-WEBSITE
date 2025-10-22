@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="Images/site.webmanifest" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Precova - Conference Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <h1>Precova</h1>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Event">Event</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+      <button onclick="window.location.href='register.html'">Register</button>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="section1" id="Home">
+      <div class="section1-content" data-aos="zoom-in" data-aos-duration="1500">
+        <h2>Welcome to Our Conference Events</h2>
+        <p>
+          Join us for an exciting lineup of events and conferences throughout
+          the year.
+        </p>
+      </div>
+    </div>
+
+    <div class="section2" id="About">
+      <div class="about-content" data-aos="fade-right" data-aos-duration="1500">
+        <h2>About Precova</h2>
+
+        <p>
+          Precova is a dynamic platform built to transform the way conferences
+          are experienced. We believe that impactful events start with
+          meaningful connections, forward-thinking content, and a space where
+          innovation thrives. Founded with the mission to elevate conferences
+          into truly engaging experiences, Precova blends modern technology with
+          smart event design. From virtual gatherings to in-person summits, we
+          help organizers and attendees connect, collaborate, and grow. At
+          Precova, we're more than just a conference site — we're the spark
+          behind powerful conversations, new partnerships, and bold ideas. Our
+          events bring together industry leaders, professionals, and enthusiasts
+          to share knowledge, network, and explore the latest trends in various
+          fields. Whether you're looking to attend a cutting-edge tech
+          conference, a creative workshop, or a professional summit, Precova is
+          your go-to destination for discovering events that inspire and
+          inform.<strong
+            >Join us and be part of a community that's shaping the future, one
+            event at a time.</strong
+          >
+        </p>
+      </div>
+
+      <div class="about-image" data-aos="fade-left" data-aos-duration="1500">
+        <img
+          src="Images/home2.jpg"
+          alt="Conference Image"
+          width="600"
+          height="600"
+        />
+      </div>
+    </div>
+
+    <div class="section3" id="Event">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="grid-item">
+        <div class="event item" data-aos="fade-up" data-aos-duration="1500">
+          <div class="event img">
+            <img
+              src="Images/tech.png"
+              alt="Tech Innovations 2025"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div class="event" data-aos="fade-up" data-aos-duration="1500">
+            <h3>Tech Innovations 2025</h3>
+            <p>Date: March 15-17, 2025</p>
+            <p>Location: San Francisco, CA</p>
+            <p>
+              Explore the latest advancements in technology with industry
+              leaders and innovators.
+            </p>
+          </div>
+        </div>
+
+        <div class="event item" data-aos="fade-up" data-aos-duration="1500">
+          <div class="event img">
+            <img
+              src="Images/market.png"
+              alt="Marketing Summit 2025"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div class="event" data-aos="fade-up" data-aos-duration="1500">
+            <h3>Marketing Summit 2025</h3>
+            <p>Date: June 10-12, 2025</p>
+            <p>Location: New York, NY</p>
+            <p>
+              Learn cutting-edge marketing strategies and network with top
+              professionals in the field.
+            </p>
+          </div>
+        </div>
+
+        <div class="event item" data-aos="fade-up" data-aos-duration="1500">
+          <div class="event img">
+            <img
+              src="Images/health.png"
+              alt="Healthcare Conference 2024"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div class="event" data-aos="fade-up" data-aos-duration="1500">
+            <h3>Healthcare Conference 2025</h3>
+            <p>Date: September 5-7, 2025</p>
+            <p>Location: Chicago, IL</p>
+            <p>
+              Discuss the future of healthcare with experts and innovators in
+              the industry.
+            </p>
+          </div>
+        </div>
+
+        <div class="event items" data-aos="fade-up" data-aos-duration="1500">
+          <div class="event img">
+            <img
+              src="Images/political.png"
+              alt="Political Conference 2025"
+              width="600"
+              height="400"
+            />
+          </div>
+          <h3>Political Conference 2025</h3>
+          <p>Date: December 20-24,2025</p>
+          <p>Location: USA</p>
+          <p>
+            Discuss and shape policies,strategies,or political agendas by
+            leaders and stakeholders.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section4" id="Contact">
+      <h2>Contact Us</h2>
+      <form
+        action="#"
+        method="post"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <footer>
+      <p>&copy; 2025 Precova. All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
